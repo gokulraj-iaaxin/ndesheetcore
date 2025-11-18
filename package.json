@@ -1,0 +1,43 @@
+{
+  "name": "ndesheetcore",
+  "version": "1.0.0",
+  "description": "FortuneSheet is a drop-in javascript spreadsheet library that provides rich features like Excel and Google Sheets",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && copyfiles -u 1 src/**/*.css dist",
+    "dev": "tsc --watch"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "sideEffects": [
+    "./dist/index.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokulraj-iaaxin/ndesheetcore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gokulraj-iaaxin/ndesheetcore/issues"
+  },
+  "homepage": "https://github.com/gokulraj-iaaxin/ndesheetcore#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
